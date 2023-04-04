@@ -1,6 +1,9 @@
 .steps {
   padding: 120px 0;
   background-color: var(--light-color);
+  @include small-tablet{
+    padding: 50px 0;
+  }
   &__title {
     margin: 0 auto;
     max-width: 720px;
@@ -10,6 +13,10 @@
     font-size: 30px;
     line-height: 38px;
     letter-spacing: 1.2px;
+    @include small-tablet{
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   &__list {
@@ -17,6 +24,9 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: 758px;
+    @include small-tablet{
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -56,6 +66,9 @@
         height: 1px;
         background: rgba(53, 83, 98, 0.2);
         transform: translateY(-50%);
+        @include small-tablet{
+          display: none;
+        }
       }
     }
   }
@@ -67,5 +80,8 @@
     line-height: 24px;
     text-align: center;
     color: rgba(53, 83, 98, 0.8);
+    @include small-tablet{
+      margin-bottom: 32px;
+    }
   }
 }

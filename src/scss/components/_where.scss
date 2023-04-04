@@ -3,14 +3,23 @@
   padding-bottom: 133px;
   background-color: #001f1f;
   color: #fff;
+  @include small-tablet{
+   padding: 60px 0;
+  }
   &__content {
     grid-column: 4 span;
+    @include small-tablet{
+      margin-bottom: 25px;
+    }
   }
   &__btn {
     color: var(--light-color);
   }
   &__map {
     grid-column: 7 / 5 span;
+    @include small-tablet{
+      grid-column:4 span;
+    }
   }
   &__title {
     margin: 0;

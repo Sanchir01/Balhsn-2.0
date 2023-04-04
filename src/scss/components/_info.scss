@@ -5,47 +5,64 @@
   height: 680px;
   color: var(--light-color);
 
-  min-height: 680px;
+  height: 680px;
   &::before {
-    content: '';
+    content: "";
     flex-shrink: 0;
     width: 287px;
     height: 100%;
-    background-image: url('../img/info-bg1.png');
-    background-position:center;
+    background-image: url("../img/info-bg1.png");
+    background-position: center;
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
+    @include tablet {
+      display: none;
+    }
   }
 
   &::after {
-    content: '';
+    content: "";
     flex-shrink: 0;
     width: 287px;
     height: 100%;
-    background-image: url('../img/info-bg1.png');
-    background-position:center;
+    background-image: url("../img/info-bg1.png");
+    background-position: center;
     background-size: cover;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
+    @include tablet {
+      display: none;
+    }
   }
   &__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items:center;
     height: 100%;
     flex-grow: 1;
     border-left: 1px solid #003331;
     border-right: 1px solid #003331;
     padding: 0 82px;
+    @include tablet {
+      padding: var(--offset);
+    }
+    @include small-tablet{
+      padding: 60px 15px;
+    }
   }
   &__title {
     padding-bottom: 21px;
     margin: 0;
     font-size: 24px;
     line-height: 22px;
+
   }
   &__descr {
     margin: 0;
     font-size: 20px;
     line-height: 24px;
+  }
+  @include tablet{
+    height: auto;
   }
 }

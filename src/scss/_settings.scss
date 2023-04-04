@@ -114,11 +114,23 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: var(--offset);
+  @include small-tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .collage {
   width: 100%;
   &__block {
     background-color: #f4f5f5;
+  }
+}
+.burger {
+  @include burger;
+  display: none;
+  --burger-height: 20px;
+  color: var(--light-color);
+  @include small-tablet {
+    display: block;
   }
 }
