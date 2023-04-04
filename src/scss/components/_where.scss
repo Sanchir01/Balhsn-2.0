@@ -1,0 +1,28 @@
+.where {
+  padding-top: 155px;
+  padding-bottom: 133px;
+  background-color: #001f1f;
+  color: #fff;
+  &__content {
+    grid-column: 4 span;
+  }
+  &__btn {
+    color: var(--light-color);
+  }
+  &__map {
+    grid-column: 7 / 5 span;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 43px;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: 1.2px;
+  }
+  &__descr {
+    margin: 0;
+    margin-bottom: 37px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
